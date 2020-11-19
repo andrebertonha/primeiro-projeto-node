@@ -14,4 +14,7 @@ appointmentsRouter.post('/', function (request, response) {
     appointments.push(appointment);
     return response.json(appointment);
 });
+appointmentsRouter.get('/', function (request, response) {
+    return response.json({ message: 'Hello goStack!' });
+});
 exports.default = appointmentsRouter;

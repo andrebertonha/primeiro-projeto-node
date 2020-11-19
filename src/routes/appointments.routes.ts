@@ -6,7 +6,7 @@ const appointmentsRouter = Router();
 const appointments = [];
 
 appointmentsRouter.post('/', (request, response) => {
-  const { provider, date } = request.body
+  const { provider, date } = request.body;
 
   const appointment = {
     id: uuid(),
@@ -18,5 +18,10 @@ appointmentsRouter.post('/', (request, response) => {
 
   return response.json(appointment);
 });
+
+appointmentsRouter.get('/', (request, response) => {
+  return response.json({ message: 'Hello goStack!' });
+});
+
 
 export default appointmentsRouter;
