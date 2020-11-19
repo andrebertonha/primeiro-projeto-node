@@ -1,8 +1,7 @@
 Aplicação node js utilizando typescript
 
-+ following instructions:
- - do
-  - yarn to install dependencies
-  + Scripts
++ instructions:
+  - yarn install
+  + scripts:
   - yarn build
   - yarn dev:server
