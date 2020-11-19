@@ -8,6 +8,7 @@
     "dev:server": "ts-node-dev --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
+    "date-fns": "^2.16.1",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.19.0",
