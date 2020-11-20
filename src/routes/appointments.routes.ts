@@ -6,7 +6,13 @@ import AppointmentsRepository from '../repositories/AppointmentsRepository';
 const appointmentsRouter = Router();
 const appointmentsRepository = new AppointmentsRepository();
 
+// SoC Separations of Concerns separacao de preocupacoes
 
+appointmentsRouter.get('/', (request, response) => {
+  const appointments = appointmentsRepository.all();
+
+  return response.json(appointments);
+});
 
 appointmentsRouter.post('/', (request, response) => {
   const { provider, date } = request.body;
@@ -25,10 +31,5 @@ appointmentsRouter.post('/', (request, response) => {
 
   return response.json(appointment);
 });
-
-appointmentsRouter.get('/', (request, response) => {
-  return response.json({ message: 'Hello goStack!' });
-});
-
 
 export default appointmentsRouter;
