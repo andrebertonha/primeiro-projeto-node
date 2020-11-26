@@ -30,6 +30,11 @@ export default class AlterProviderFieldToProviderId1606395396205 implements Migr
       await queryRunner.dropForeignKey('appointments', 'AppointmentProvider');
 
       await queryRunner.dropColumn('appointments', 'provider_id');
+
+      await queryRunner.addColumn('appointments', new TableColumn({
+          name: 'provider',
+          type: 'varchar',
+      }))
     }
 
 }
