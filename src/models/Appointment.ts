@@ -8,6 +8,8 @@ import {
   JoinColumn,
   } from 'typeorm';
 
+import User from './User'
+
 @Entity('appointments')
 class Appointment {
   @PrimaryGeneratedColumn('uuid')
