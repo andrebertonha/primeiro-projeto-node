@@ -1,4 +1,5 @@
 import { startOfHour } from 'date-fns';
+import { uuid } from 'uuidv4';
 import { getCustomRepository } from 'typeorm';
 
 import Appointment from '../models/Appointment';
@@ -40,7 +41,7 @@ class CreateAppointmentService {
     }
 
     const appointment = appointmentsRepository.create({
-      provider,
+      provider_id: uuid(),
       date: appointmentDate,
     });
 
