@@ -35,7 +35,7 @@ class AuthenticateUserService {
 
     // experiencia do usuario / segurança
 
-    const token = sign({  }, '6330576eaba5f7ca96f70ecb487ae334', {
+    const token = sign({}, '6330576eaba5f7ca96f70ecb487ae334', {
       subject: user.id,
       expiresIn: '1d',
     })
