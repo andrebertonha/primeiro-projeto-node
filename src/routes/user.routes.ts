@@ -10,6 +10,7 @@ const usersRouter = Router();
 const upload = multer(uploadConfig);
 
 usersRouter.post('/', async (request, response) => {
+
   try {
 
     const { name, email, password } = request.body;
@@ -35,6 +36,8 @@ usersRouter.patch(
   ensureAuthenticated,
   upload.single('avatar'),
   async (request, response) => {
+
+    console.log(request.file);
     return response.json({ ok: true });
   },
 );
